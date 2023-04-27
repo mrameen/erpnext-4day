@@ -199,3 +199,8 @@ app_license = "MIT"
 # auth_hooks = [
 #	"service_station.auth.validate"
 # ]
+
+
+fixtures = [
+    "Custom Field"
+]

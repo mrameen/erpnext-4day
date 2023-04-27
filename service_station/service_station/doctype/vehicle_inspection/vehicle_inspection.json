@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{ticket_number}-{inspecting_engineer}",
+ "creation": "2023-04-18 09:58:44.819672",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket_number",
+  "vehicle_reg",
+  "column_break_3vx6m",
+  "inspecting_engineer",
+  "amended_from",
+  "required_services_section",
+  "required_services_detail",
+  "required_spare_parts_section",
+  "required_spare_detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ticket Number",
+   "options": "Parking Ticket"
+  },
+  {
+   "fieldname": "inspecting_engineer",
+   "fieldtype": "Link",
+   "label": "Inspecting Engineer",
+   "options": "User"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle Inspection",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ticket_number.vehicle",
+   "fieldname": "vehicle_reg",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vehicle Reg",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3vx6m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_services_section",
+   "fieldtype": "Section Break",
+   "label": "Required Services"
+  },
+  {
+   "fieldname": "required_services_detail",
+   "fieldtype": "Table",
+   "label": "Required Service Detail",
+   "options": "Required Service Detail"
+  },
+  {
+   "fieldname": "required_spare_parts_section",
+   "fieldtype": "Section Break",
+   "label": "Required Spare Parts"
+  },
+  {
+   "fieldname": "required_spare_detail",
+   "fieldtype": "Table",
+   "label": "Required Spare Detail",
+   "options": "Required Spare Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-18 10:59:16.656101",
+ "modified_by": "Administrator",
+ "module": "Service Station",
+ "name": "Vehicle Inspection",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
